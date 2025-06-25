@@ -1,7 +1,7 @@
 pub mod union_find;
 
 pub mod prelude {
-	pub use crate::union_find::*;
+    pub use crate::union_find::*;
 }
 
 #[cfg(test)]
