@@ -30,6 +30,11 @@ impl UnionFind {
             self.parents[i] += 1;
         }
     }
+	pub fn union_elements(&mut self, e1: usize, e2: usize) {
+		let r1 = self.find(e1);
+		let r2 = self.find(e2);
+		self.union(r1,r2);
+	}
     pub fn contains(&mut self, r: &Representative, e: usize) -> bool {
         self.find(e) == *r
     }
